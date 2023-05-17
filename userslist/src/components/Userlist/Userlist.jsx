@@ -6,7 +6,7 @@ export const Userlist = ({users}) =>{
         <>
         <div className='card-container'>
             {users.map((user) => (
-                <div key={user.id + Math.random()}>
+                <div key={user.id}>
                     <Users users={user} />
                 </div>
             ))}

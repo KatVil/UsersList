@@ -5,23 +5,23 @@ import {useState, useEffect } from 'react';
 
 function App() {
   const [users, setUsers] = useState([]);
+  const [addUsers, setAddUsers] = useState(10);
 
   useEffect(() => {
-    fetch("https://jsonplaceholder.typicode.com/todos/1")
+    fetch("'https://jsonplaceholder.typicode.com/users")
       .then((response) => response.json())
-      .then((json) => setUsers(json));
-  }, []);
+      .then((result) => result.map(user=>{user.id = user.id + addUsers
+      return user}))
+      .then((result) => setUsers(prev => [...prev, ...result]))
+  }, [addUsers]);
 
-  const add = () => {
-    fetch("https://jsonplaceholder.typicode.com/todos/1")
-      .then((response) => response.json())
-      .then((json) => setUsers(prev => [...prev, ...json]));
-  };
+
 
   return (
     <>
-      <Header add={add} />
-      <Userlist users={users} />
+      <Header setAddUsers={setAddUsers} />
+      <Userlist users={users}
+        addUsers={addUsers} />
     </>
   );
 }

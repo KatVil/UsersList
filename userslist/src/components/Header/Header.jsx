@@ -1,6 +1,6 @@
 import React from "react";
 
-export const Header = ({ add }) => {
+export const Header = ({ setAddUsers }) => {
   return (
     <>
       <nav>
@@ -10,7 +10,7 @@ export const Header = ({ add }) => {
           </a>
           <ul className="right">
             <li>
-              <button className="waves-effect waves-light btn" onClick={()=>add()}>ADD</button>
+              <button className="waves-effect waves-light btn" onClick={()=>setAddUsers(prev => prev + 10)}>ADD</button>
             </li>
           </ul>
         </div>

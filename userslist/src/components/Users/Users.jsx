@@ -9,7 +9,7 @@ export const Users = ({users}) => {
           <p><a className='card-link' href={users.website}>{users.website}</a></p>
         </div>
         <div className="card-reveal">
-          <p><span className='card-text'>Username:</span> {users.username}</p>
+          <p><span className='card-text'>Username:</span> {users.name}</p>
           <p><span className='card-text'>Email:</span> {users.email}</p>
           <p><span className='card-text'>Phone:</span> {users.phone}</p>
         </div>
