@@ -5,7 +5,7 @@ export const Users = ({users}) => {
         <>
         <div className="card" >
         <div className="card-content">
-          <span className="card-title activator grey-text text-darken-4">{users.name}<i className="material-icons right">more_vert</i></span>
+          <span className="card-title activator grey-text text-darken-4">{users.name}<i className="material-icons right">more info</i></span>
           <p><a className='card-link' href={users.website}>{users.website}</a></p>
         </div>
         <div className="card-reveal">
